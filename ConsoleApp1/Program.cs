@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ConsoleApp1;
+
+Auto auto1 = new Auto();
+auto1.znacka = "Skoda";
+auto1.model = "Fabia";
+auto1.rok_vyroby = 1991;
