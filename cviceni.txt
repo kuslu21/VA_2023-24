@@ -1,0 +1,206 @@
+using System;
+
+int n = 10;
+
+
+    static void ukol_a(int n)
+            {
+                int start = 1;
+                int step = 4;
+
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write(start);
+                    start += step;
+                }
+            }
+    ukol_a(n);
+
+    static void ukol_b(int n)
+        {
+            int number = 2;
+            int found = 0;
+
+            while (found < n)
+            {
+                if (je_prvocislo(number))
+                {
+                    Console.Write(number);
+                }
+                number++;
+            }
+        }
+
+    static bool je_prvocislo(int n)
+    {
+        if (n < 2) return false;
+
+        for (int i = 2; i <= Math.Sqrt(n); i++)
+        {
+            if (n % i == 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    static void ukol_c(int n)
+            {
+                int current = 1;
+                int increment = 1;
+
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write(current);
+                    current += increment;
+                    increment++;
+                }
+            }
+        ukol_c(n);
+
+    static void ukol_d(int n)
+        {
+            int current = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(current);
+                current = (current % i) + 1;
+            }
+        }
+    ukol_d(n);
+
+    static void ukol_e(int n)
+        {
+            int current = 1;
+            int increment = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(current);
+                current += increment;
+                increment++;
+
+                if (i % 2 == 0)
+                {
+                    current += 2;
+                }
+            }
+        }
+    ukol_e(n);
+
+    static void ukol_f(int n)
+        {
+            int current = 1;
+            int increment = 2;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(current);
+                current += increment;
+            }
+        }
+    ukol_f(n);
+
+    static void ukol_g(int n)
+        {
+            int current = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(current);
+                current *= 2;
+            }
+        }
+    ukol_g(n);
+
+    static void ukol_h(int n)
+        {
+            int a = 0;
+            int b = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(a);
+                int temp = a + b;
+                a = b;
+                b = temp;
+            }
+        }
+    ukol_h(n);
+
+    static void ukol_i(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write(i);
+            }
+        }
+    ukol_i(n);
+
+    static void ukol_j(int n)
+    {
+        string current = "1";
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write(current);
+            current = cestinarsky_algoritmus(current);
+        }
+    }
+
+    static string cestinarsky_algoritmus(string input)
+    {
+        char currentChar = input[0];
+        int count = 1;
+        string result = "";
+
+        for (int i = 1; i < input.Length; i++)
+        {
+            if (input[i] == currentChar)
+            {
+                count++;
+            }
+            else
+            {
+                result += count.ToString() + currentChar;
+                currentChar = input[i];
+                count = 1;
+            }
+        }
+
+        result += count.ToString() + currentChar;
+        return result;
+    }
+    ukol_j(n);
+
+
+    static void ukol_k(int n)
+        {
+            int current = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write(current);
+                current *= i;
+            }
+        }
+    ukol_k(n);
+
+
+    static void ukol_l(int n)
+        {
+            int current = 1;
+
+            for (int i = 2; i <= n; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(current);
+                }
+                current++;
+            }
+        }
+    ukol_l(n);
