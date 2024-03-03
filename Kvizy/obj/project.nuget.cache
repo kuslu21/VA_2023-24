@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VV0JWl72z6zBY97+dW/krIJSYUYXDKq6qZob9NsjA2mn8Yy9OMoF4I+uIRIdVWl1ORsLgrypX1tGB4fAYTsYZw==",
+  "success": true,
+  "projectFilePath": "D:\\c#\\Kvizy\\Kvizy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hawt_sauce\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
